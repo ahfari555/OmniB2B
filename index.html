@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags for US Audience -->
+  <title>OmniB2B - Advanced US Business, SaaS & Payroll Calculators</title>
+  <meta name="description" content="100% free US business and SaaS calculators. Calculate employee payroll, profit margins, freelance hourly rates, and ROI instantly.">
+  <meta name="keywords" content="payroll calculator, profit margin calculator, freelancer hourly rate, business tools, saas calculators">
+  <meta name="author" content="OmniB2B">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Search Console Verification Tag -->
+  <meta name="google-site-verification" content="google45274bc7d9133ca5" />
+
+  <!-- Google AdSense Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2805918301542012" crossorigin="anonymous"></script>
+
+  <!-- Favicon SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💼</text></svg>">
+
+  <!-- Google Font: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+      transition: background-color 0.3s ease;
+    }
+    html.dark body {
+      background: linear-gradient(135deg, #09090b 0%, #0f172a 50%, #1e1b4b 100%);
+      color: #f8fafc;
+    }
+    .pastel-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+      transition: all 0.3s ease;
+    }
+    html.dark .pastel-card {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #0f172a 0%, #2563eb 50%, #0d9488 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    html.dark .gradient-text {
+      background: linear-gradient(135deg, #60a5fa 0%, #34d399 50%, #f8fafc 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="font-sans min-h-screen flex flex-col antialiased text-slate-800 dark:text-slate-100">
+
+  <!-- TOP NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/70 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-slate-900 via-blue-600 to-teal-600 flex items-center justify-center font-black text-xl text-white shadow-md">
+          💼
+        </div>
+        <span class="text-xl font-extrabold tracking-tight text-slate-800 dark:text-white">Omni<span class="gradient-text">B2B</span></span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+          <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span> US Business Intelligence
+        </span>
+        <button onclick="toggleDarkMode()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="max-w-7xl mx-auto px-6 pt-10 pb-6 text-center">
+    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950 px-3 py-1 rounded-full border border-blue-100 dark:border-blue-900 mb-3 inline-block">High-CPC US Enterprise Tools</span>
+    <h1 class="text-3xl md:text-5xl font-black tracking-tight text-slate-800 dark:text-white mb-3">
+      Professional Payroll, Margins & <span class="gradient-text">SaaS Calculators.</span>
+    </h1>
+    <p class="text-slate-500 dark:text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-medium">
+      Accurately calculate US employee payroll costs, product profit margins, freelance hourly pricing, and software ROI instantly.
+    </p>
+  </section>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-6 py-6 flex-1 w-full space-y-8">
+
+    <!-- TAB NAVIGATION -->
+    <div class="flex justify-center mb-4">
+      <div class="bg-slate-200/70 dark:bg-slate-800 p-1.5 rounded-2xl flex flex-wrap gap-2 justify-center">
+        <button onclick="switchTab('payroll')" id="tabBtnPayroll" class="px-4 py-2 rounded-xl text-xs font-bold transition bg-white dark:bg-slate-700 text-slate-800 dark:text-white shadow-sm">👥 US Payroll Estimator</button>
+        <button onclick="switchTab('margin')" id="tabBtnMargin" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">📊 Profit Margin</button>
+        <button onclick="switchTab('freelance')" id="tabBtnFreelance" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">⏱️ Freelance Rate</button>
+        <button onclick="switchTab('roi')" id="tabBtnRoi" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">📈 SaaS ROI</button>
+      </div>
+    </div>
+
+    <!-- TAB 1: US PAYROLL ESTIMATOR -->
+    <div id="tabContentPayroll" class="pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+      <div>
+        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">👥 US Employee Payroll & Tax Estimator</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Estimate employer total costs including gross salary, FICA taxes (Social Security & Medicare), and FUTA allowances.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Annual Gross Salary ($):</label>
+          <input type="number" id="paySalary" value="75000" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Employer FICA Tax Rate (%):</label>
+          <input type="number" step="0.1" id="payFica" value="7.65" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Benefits / Insurance Buffer ($):</label>
+          <input type="number" id="payBenefits" value="6000" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+      </div>
+
+      <div>
+        <button onclick="calculatePayroll()" class="bg-gradient-to-r from-slate-900 to-blue-600 hover:from-slate-800 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
+          Calculate Total Cost 📊
+        </button>
+      </div>
+
+      <div id="payrollResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+          <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+            <div class="text-[10px] uppercase font-bold text-slate-400">Employer FICA Tax</div>
+            <div id="resPayFica" class="text-2xl font-black text-amber-600 dark:text-amber-400">$0</div>
+          </div>
+          <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+            <div class="text-[10px] uppercase font-bold text-slate-400">Total Annual Cost</div>
+            <div id="resPayTotal" class="text-2xl font-black text-blue-600 dark:text-blue-400">$0</div>
+          </div>
+          <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+            <div class="text-[10px] uppercase font-bold text-slate-400">Monthly Employer Burden</div>
+            <div id="resPayMonthly" class="text-2xl font-black text-teal-600 dark:text-teal-400">$0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: PROFIT MARGIN CALCULATOR -->
+    <div id="tabContentMargin" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+      <div>
+        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">📊 Business Profit Margin & Markup Calculator</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Determine gross profit, profit margin percentage, and optimal retail pricing for products or services.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Product Cost (COGS) ($):</label>
+          <input type="number" id="marCost" value="45.00" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Selling Price ($):</label>
+          <input type="number" id="marPrice" value="120.00" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+      </div>
+
+      <div>
+        <button onclick="calculateMargin()" class="bg-gradient-to-r from-slate-900 to-blue-600 hover:from-slate-800 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
+          Calculate Margin 📈
+        </button>
+      </div>
+
+      <div id="marginResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+          <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+            <div class="text-[10px] uppercase font-bold text-slate-400">Gross Profit ($)</div>
+            <div id="resMarProfit" class="text-2xl font-black text-teal-600 dark:text-teal-400">$0</div>
+          </div>
+          <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+            <div class="text-[10px] uppercase font-bold text-slate-400">Profit Margin (%)</div>
+            <div id="resMarPct" class="text-2xl font-black text-blue-600 dark:text-blue-400">0%</div>
+          </div>
+          <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+            <div class="text-[10px] uppercase font-bold text-slate-400">Markup (%)</div>
+            <div id="resMarMarkup" class="text-2xl font-black text-purple-600 dark:text-purple-400">0%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: FREELANCE HOURLY RATE -->
+    <div id="tabContentFreelance" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+      <div>
+        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">⏱️ Freelance & Contractor Hourly Rate Calculator</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Calculate a sustainable hourly billing rate based on target income, expenses, and billable hours.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Target Annual Income ($):</label>
+          <input type="number" id="freeIncome" value="95000" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Annual Business Expenses ($):</label>
+          <input type="number" id="freeExpenses" value="12000" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Billable Hours per Week:</label>
+          <input type="number" id="freeHours" value="30" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+      </div>
+
+      <div>
+        <button onclick="calculateFreelance()" class="bg-gradient-to-r from-slate-900 to-blue-600 hover:from-slate-800 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
+          Calculate Rate 💡
+        </button>
+      </div>
+
+      <div id="freelanceResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 text-center space-y-2">
+        <div class="text-[10px] uppercase font-bold text-slate-500">Recommended Hourly Rate:</div>
+        <div id="resFreeRate" class="text-3xl font-black text-blue-600 dark:text-blue-400">$0 / hr</div>
+        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Factors in self-employment taxes, overhead, and non-billable administration hours.</p>
+      </div>
+    </div>
+
+    <!-- TAB 4: SAAS ROI CALCULATOR -->
+    <div id="tabContentRoi" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+      <div>
+        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">📈 SaaS Investment & Automation ROI Calculator</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Calculate the return on investment (ROI) from adopting software automation or B2B tools.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Monthly Software Cost ($):</label>
+          <input type="number" id="roiCost" value="299" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+        <div>
+          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Monthly Hours Saved:</label>
+          <input type="number" id="roiHours" value="40" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+        </div>
+      </div>
+
+      <div>
+        <button onclick="calculateRoi()" class="bg-gradient-to-r from-slate-900 to-blue-600 hover:from-slate-800 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
+          Calculate SaaS ROI 🚀
+        </button>
+      </div>
+
+      <div id="roiResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 text-center space-y-2">
+        <div class="text-[10px] uppercase font-bold text-slate-500">Estimated Annual Net Return:</div>
+        <div id="resRoiTotal" class="text-3xl font-black text-teal-600 dark:text-teal-400">$0</div>
+        <p id="resRoiPct" class="text-xs text-slate-600 dark:text-slate-400 mt-1"></p>
+      </div>
+    </div>
+
+    <!-- SEO ARTICLE SECTION -->
+    <section class="pastel-card p-8 rounded-3xl space-y-4">
+      <h2 class="text-xl font-black text-slate-800 dark:text-white">Empowering US Businesses with Smart Financial Planning</h2>
+      <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+        Running a successful business or startup in the United States requires rigorous financial forecasting. Whether you are scaling internal payroll, analyzing product profit margins, or justifying enterprise SaaS investments, accurate calculations drive sustainable growth. <strong>OmniB2B</strong> provides independent, high-performance financial tools built for modern entrepreneurs and corporate decision-makers.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 py-8 text-center text-xs text-slate-500 dark:text-slate-400 font-medium mt-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© 2026 OmniB2B. Independent Business Calculators. Not formal corporate accounting counsel.</p>
+      <div class="flex gap-6">
+        <a href="privacy.html" class="hover:text-slate-800 dark:hover:text-white transition">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-slate-800 dark:hover:text-white transition">Terms of Service</a>
+        <a href="contact.html" class="hover:text-slate-800 dark:hover:text-white transition">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    function toggleDarkMode() {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+        document.getElementById('themeIcon').innerText = '🌙';
+      } else {
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+        document.getElementById('themeIcon').innerText = '☀️';
+      }
+    }
+
+    function switchTab(tab) {
+      const tabs = ['payroll', 'margin', 'freelance', 'roi'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tabBtn' + t.charAt(0).toUpperCase() + t.slice(1));
+        const con = document.getElementById('tabContent' + t.charAt(0).toUpperCase() + t.slice(1));
+        if (btn && con) {
+          if (t === tab) {
+            btn.className = "px-4 py-2 rounded-xl text-xs font-bold transition bg-white dark:bg-slate-700 text-slate-800 dark:text-white shadow-sm";
+            con.classList.remove('hidden');
+          } else {
+            btn.className = "px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800";
+            con.classList.add('hidden');
+          }
+        }
+      });
+    }
+
+    // Payroll Estimator
+    function calculatePayroll() {
+      const salary = parseFloat(document.getElementById('paySalary').value) || 0;
+      const ficaRate = parseFloat(document.getElementById('payFica').value) || 7.65;
+      const benefits = parseFloat(document.getElementById('payBenefits').value) || 0;
+
+      const ficaTotal = salary * (ficaRate / 100);
+      const totalCost = salary + ficaTotal + benefits;
+      const monthlyCost = totalCost / 12;
+
+      document.getElementById('resPayFica').innerText = '$' + Math.round(ficaTotal).toLocaleString();
+      document.getElementById('resPayTotal').innerText = '$' + Math.round(totalCost).toLocaleString();
+      document.getElementById('resPayMonthly').innerText = '$' + Math.round(monthlyCost).toLocaleString();
+      document.getElementById('payrollResult').classList.remove('hidden');
+    }
+
+    // Profit Margin Calculator
+    function calculateMargin() {
+      const cost = parseFloat(document.getElementById('marCost').value) || 0;
+      const price = parseFloat(document.getElementById('marPrice').value) || 0;
+
+      if (price <= 0) return;
+      const profit = price - cost;
+      const margin = (profit / price) * 100;
+      const markup = cost > 0 ? (profit / cost) * 100 : 0;
+
+      document.getElementById('resMarProfit').innerText = '$' + profit.toFixed(2);
+      document.getElementById('resMarPct').innerText = margin.toFixed(1) + '%';
+      document.getElementById('resMarMarkup').innerText = markup.toFixed(1) + '%';
+      document.getElementById('marginResult').classList.remove('hidden');
+    }
+
+    // Freelance Rate Calculator
+    function calculateFreelance() {
+      const income = parseFloat(document.getElementById('freeIncome').value) || 0;
+      const expenses = parseFloat(document.getElementById('freeExpenses').value) || 0;
+      const hoursPerWeek = parseFloat(document.getElementById('freeHours').value) || 30;
+
+      // Assuming 48 weeks worked per year and 75% billable ratio due to admin
+      const totalNeeded = (income + expenses) * 1.3; // 30% buffer for self-employment tax
+      const billableHoursAnnual = hoursPerWeek * 48 * 0.75;
+      const hourlyRate = billableHoursAnnual > 0 ? totalNeeded / billableHoursAnnual : 0;
+
+      document.getElementById('resFreeRate').innerText = '$' + Math.round(hourlyRate) + ' / hr';
+      document.getElementById('freelanceResult').classList.remove('hidden');
+    }
+
+    // SaaS ROI Calculator
+    function calculateRoi() {
+      const cost = parseFloat(document.getElementById('roiCost').value) || 0;
+      const hoursSaved = parseFloat(document.getElementById('roiHours').value) || 0;
+
+      const annualCost = cost * 12;
+      const valueSaved = hoursSaved * 50 * 12; // Assuming $50/hr average professional value
+      const netReturn = valueSaved - annualCost;
+      const roiPct = annualCost > 0 ? (netReturn / annualCost) * 100 : 0;
+
+      document.getElementById('resRoiTotal').innerText = '$' + Math.round(netReturn).toLocaleString();
+      document.getElementById('resRoiPct').innerText = `Estimated Return on Investment (ROI): ${Math.round(roiPct)}% annually.`;
+      document.getElementById('roiResult').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
