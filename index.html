@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags for US Audience -->
-  <title>OmniB2B - Advanced US Business, SaaS & Payroll Calculators</title>
-  <meta name="description" content="100% free US business and SaaS calculators. Calculate employee payroll, profit margins, freelance hourly rates, and ROI instantly.">
-  <meta name="keywords" content="payroll calculator, profit margin calculator, freelancer hourly rate, business tools, saas calculators">
+  <title>OmniB2B - Advanced US Business, SaaS & Payroll Calculators & Expert Guides</title>
+  <meta name="description" content="100% free US business and SaaS calculators. Calculate employee payroll, profit margins, freelance hourly rates, SaaS ROI, and read expert enterprise growth guides.">
+  <meta name="keywords" content="payroll calculator, profit margin calculator, freelancer hourly rate, business tools, saas calculators, enterprise automation">
   <meta name="author" content="OmniB2B">
   <meta name="robots" content="index, follow">
 
@@ -71,6 +71,24 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    .hero-glow {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(37,99,235,0.12) 0%, rgba(13,148,136,0.08) 60%, transparent 100%);
+      z-index: 0;
+      pointer-events: none;
+      border-radius: 50%;
+    }
+    .article-body h3 { font-size: 1.5rem; font-weight: 800; margin-top: 2rem; margin-bottom: 1rem; color: #2563eb; }
+    html.dark .article-body h3 { color: #60a5fa; }
+    .article-body p { font-size: 1.05rem; line-height: 2; color: #475569; margin-bottom: 1.25rem; }
+    html.dark .article-body p { color: #cbd5e1; }
+    .article-body ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: #475569; }
+    html.dark .article-body ul { color: #cbd5e1; }
+    .article-body li { margin-bottom: 0.5rem; font-size: 1rem; }
+    @keyframes float-slow { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+    .animate-float { animation: float-slow 4s ease-in-out infinite; }
   </style>
 </head>
 <body class="font-sans min-h-screen flex flex-col antialiased text-slate-800 dark:text-slate-100">
@@ -86,6 +104,7 @@
       </a>
 
       <div class="flex items-center gap-3">
+        <a href="#editorial-panels" class="hidden md:inline-flex text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">📚 Enterprise Guides</a>
         <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
           <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span> US Business Intelligence
         </span>
@@ -96,193 +115,364 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="max-w-7xl mx-auto px-6 pt-10 pb-6 text-center">
-    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950 px-3 py-1 rounded-full border border-blue-100 dark:border-blue-900 mb-3 inline-block">High-CPC US Enterprise Tools</span>
-    <h1 class="text-3xl md:text-5xl font-black tracking-tight text-slate-800 dark:text-white mb-3">
-      Professional Payroll, Margins & <span class="gradient-text">SaaS Calculators.</span>
-    </h1>
-    <p class="text-slate-500 dark:text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-medium">
-      Accurately calculate US employee payroll costs, product profit margins, freelance hourly pricing, and software ROI instantly.
-    </p>
-  </section>
+  <!-- MAIN APP VIEW (HOME) -->
+  <div id="homeView">
+    <!-- HERO SECTION -->
+    <div class="hero-glow top-24 left-1/2 -translate-x-1/2"></div>
+    <section class="max-w-7xl mx-auto px-6 pt-10 pb-6 text-center relative z-10">
+      <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950 px-3 py-1 rounded-full border border-blue-100 dark:border-blue-900 mb-3 inline-block">High-CPC US Enterprise Tools</span>
+      
+      <!-- HERO SVG ILLUSTRATION -->
+      <div class="max-w-lg mx-auto my-6 animate-float">
+        <svg viewBox="0 0 520 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-2xl">
+          <defs>
+            <linearGradient id="b2bGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0f172a" />
+              <stop offset="50%" stop-color="#2563eb" />
+              <stop offset="100%" stop-color="#0d9488" />
+            </linearGradient>
+          </defs>
+          <rect x="30" y="20" width="460" height="180" rx="28" fill="url(#b2bGrad)" fill-opacity="0.05" stroke="url(#b2bGrad)" stroke-width="2" stroke-dasharray="8 6" />
+          <rect x="60" y="45" width="150" height="130" rx="14" fill="#ffffff" class="dark:fill-slate-800" stroke="#cbd5e1" stroke-width="1.5" />
+          <rect x="80" y="65" width="90" height="10" rx="4" fill="#2563eb" fill-opacity="0.6" />
+          <rect x="80" y="85" width="110" height="8" rx="3" fill="#cbd5e1" fill-opacity="0.4" />
+          <rect x="80" y="100" width="100" height="8" rx="3" fill="#cbd5e1" fill-opacity="0.4" />
+          <text x="135" y="145" text-anchor="middle" fill="#0d9488" font-size="11" font-weight="bold">📊 US Payroll & Tax</text>
 
-  <!-- MAIN CONTAINER -->
-  <main class="max-w-7xl mx-auto px-6 py-6 flex-1 w-full space-y-8">
+          <path d="M 230 110 L 270 110" stroke="url(#b2bGrad)" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 6" />
+          <polygon points="270,102 290,110 270,118" fill="#2563eb" />
+          <circle cx="250" cy="80" r="16" fill="#2563eb" fill-opacity="0.15" />
+          <text x="250" y="84" text-anchor="middle" fill="#2563eb" font-size="12">💼</text>
 
-    <!-- TAB NAVIGATION -->
-    <div class="flex justify-center mb-4">
-      <div class="bg-slate-200/70 dark:bg-slate-800 p-1.5 rounded-2xl flex flex-wrap gap-2 justify-center">
-        <button onclick="switchTab('payroll')" id="tabBtnPayroll" class="px-4 py-2 rounded-xl text-xs font-bold transition bg-white dark:bg-slate-700 text-slate-800 dark:text-white shadow-sm">👥 US Payroll Estimator</button>
-        <button onclick="switchTab('margin')" id="tabBtnMargin" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">📊 Profit Margin</button>
-        <button onclick="switchTab('freelance')" id="tabBtnFreelance" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">⏱️ Freelance Rate</button>
-        <button onclick="switchTab('roi')" id="tabBtnRoi" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">📈 SaaS ROI</button>
-      </div>
-    </div>
+          <rect x="310" y="45" width="150" height="130" rx="14" fill="#ffffff" class="dark:fill-slate-800" stroke="#0d9488" stroke-width="2" />
+          <rect x="330" y="65" width="90" height="10" rx="4" fill="#0d9488" fill-opacity="0.8" />
+          <rect x="330" y="85" width="105" height="8" rx="3" fill="#cbd5e1" fill-opacity="0.4" />
+          <rect x="330" y="138" width="85" height="20" rx="6" fill="#0d9488" />
+          <text x="372" y="152" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="bold">🚀 MAX ROI</text>
 
-    <!-- TAB 1: US PAYROLL ESTIMATOR -->
-    <div id="tabContentPayroll" class="pastel-card p-6 md:p-8 rounded-3xl space-y-6">
-      <div>
-        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">👥 US Employee Payroll & Tax Estimator</h2>
-        <p class="text-xs text-slate-500 dark:text-slate-400">Estimate employer total costs including gross salary, FICA taxes (Social Security & Medicare), and FUTA allowances.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div>
-          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Annual Gross Salary ($):</label>
-          <input type="number" id="paySalary" value="75000" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
-        </div>
-        <div>
-          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Employer FICA Tax Rate (%):</label>
-          <input type="number" step="0.1" id="payFica" value="7.65" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
-        </div>
-        <div>
-          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Benefits / Insurance Buffer ($):</label>
-          <input type="number" id="payBenefits" value="6000" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
-        </div>
+          <g transform="translate(140, 15)">
+            <rect width="240" height="32" rx="12" fill="#ffffff" class="dark:fill-slate-800" stroke="#2563eb" stroke-width="1.5" />
+            <text x="120" y="21" text-anchor="middle" fill="#2563eb" font-size="11" font-weight="bold">💼 Enterprise B2B Financial Suite</text>
+          </g>
+        </svg>
       </div>
 
-      <div>
-        <button onclick="calculatePayroll()" class="bg-gradient-to-r from-slate-900 to-blue-600 hover:from-slate-800 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
-          Calculate Total Cost 📊
-        </button>
-      </div>
-
-      <div id="payrollResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 space-y-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-          <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
-            <div class="text-[10px] uppercase font-bold text-slate-400">Employer FICA Tax</div>
-            <div id="resPayFica" class="text-2xl font-black text-amber-600 dark:text-amber-400">$0</div>
-          </div>
-          <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
-            <div class="text-[10px] uppercase font-bold text-slate-400">Total Annual Cost</div>
-            <div id="resPayTotal" class="text-2xl font-black text-blue-600 dark:text-blue-400">$0</div>
-          </div>
-          <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
-            <div class="text-[10px] uppercase font-bold text-slate-400">Monthly Employer Burden</div>
-            <div id="resPayMonthly" class="text-2xl font-black text-teal-600 dark:text-teal-400">$0</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 2: PROFIT MARGIN CALCULATOR -->
-    <div id="tabContentMargin" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
-      <div>
-        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">📊 Business Profit Margin & Markup Calculator</h2>
-        <p class="text-xs text-slate-500 dark:text-slate-400">Determine gross profit, profit margin percentage, and optimal retail pricing for products or services.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Product Cost (COGS) ($):</label>
-          <input type="number" id="marCost" value="45.00" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
-        </div>
-        <div>
-          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Selling Price ($):</label>
-          <input type="number" id="marPrice" value="120.00" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
-        </div>
-      </div>
-
-      <div>
-        <button onclick="calculateMargin()" class="bg-gradient-to-r from-slate-900 to-blue-600 hover:from-slate-800 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
-          Calculate Margin 📈
-        </button>
-      </div>
-
-      <div id="marginResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 space-y-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-          <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
-            <div class="text-[10px] uppercase font-bold text-slate-400">Gross Profit ($)</div>
-            <div id="resMarProfit" class="text-2xl font-black text-teal-600 dark:text-teal-400">$0</div>
-          </div>
-          <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
-            <div class="text-[10px] uppercase font-bold text-slate-400">Profit Margin (%)</div>
-            <div id="resMarPct" class="text-2xl font-black text-blue-600 dark:text-blue-400">0%</div>
-          </div>
-          <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
-            <div class="text-[10px] uppercase font-bold text-slate-400">Markup (%)</div>
-            <div id="resMarMarkup" class="text-2xl font-black text-purple-600 dark:text-purple-400">0%</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 3: FREELANCE HOURLY RATE -->
-    <div id="tabContentFreelance" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
-      <div>
-        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">⏱️ Freelance & Contractor Hourly Rate Calculator</h2>
-        <p class="text-xs text-slate-500 dark:text-slate-400">Calculate a sustainable hourly billing rate based on target income, expenses, and billable hours.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div>
-          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Target Annual Income ($):</label>
-          <input type="number" id="freeIncome" value="95000" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
-        </div>
-        <div>
-          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Annual Business Expenses ($):</label>
-          <input type="number" id="freeExpenses" value="12000" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
-        </div>
-        <div>
-          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Billable Hours per Week:</label>
-          <input type="number" id="freeHours" value="30" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
-        </div>
-      </div>
-
-      <div>
-        <button onclick="calculateFreelance()" class="bg-gradient-to-r from-slate-900 to-blue-600 hover:from-slate-800 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
-          Calculate Rate 💡
-        </button>
-      </div>
-
-      <div id="freelanceResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 text-center space-y-2">
-        <div class="text-[10px] uppercase font-bold text-slate-500">Recommended Hourly Rate:</div>
-        <div id="resFreeRate" class="text-3xl font-black text-blue-600 dark:text-blue-400">$0 / hr</div>
-        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Factors in self-employment taxes, overhead, and non-billable administration hours.</p>
-      </div>
-    </div>
-
-    <!-- TAB 4: SAAS ROI CALCULATOR -->
-    <div id="tabContentRoi" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
-      <div>
-        <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">📈 SaaS Investment & Automation ROI Calculator</h2>
-        <p class="text-xs text-slate-500 dark:text-slate-400">Calculate the return on investment (ROI) from adopting software automation or B2B tools.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Monthly Software Cost ($):</label>
-          <input type="number" id="roiCost" value="299" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
-        </div>
-        <div>
-          <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Monthly Hours Saved:</label>
-          <input type="number" id="roiHours" value="40" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
-        </div>
-      </div>
-
-      <div>
-        <button onclick="calculateRoi()" class="bg-gradient-to-r from-slate-900 to-blue-600 hover:from-slate-800 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
-          Calculate SaaS ROI 🚀
-        </button>
-      </div>
-
-      <div id="roiResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 text-center space-y-2">
-        <div class="text-[10px] uppercase font-bold text-slate-500">Estimated Annual Net Return:</div>
-        <div id="resRoiTotal" class="text-3xl font-black text-teal-600 dark:text-teal-400">$0</div>
-        <p id="resRoiPct" class="text-xs text-slate-600 dark:text-slate-400 mt-1"></p>
-      </div>
-    </div>
-
-    <!-- SEO ARTICLE SECTION -->
-    <section class="pastel-card p-8 rounded-3xl space-y-4">
-      <h2 class="text-xl font-black text-slate-800 dark:text-white">Empowering US Businesses with Smart Financial Planning</h2>
-      <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
-        Running a successful business or startup in the United States requires rigorous financial forecasting. Whether you are scaling internal payroll, analyzing product profit margins, or justifying enterprise SaaS investments, accurate calculations drive sustainable growth. <strong>OmniB2B</strong> provides independent, high-performance financial tools built for modern entrepreneurs and corporate decision-makers.
+      <h1 class="text-3xl md:text-5xl font-black tracking-tight text-slate-800 dark:text-white mb-3">
+        Professional Payroll, Margins & <span class="gradient-text">SaaS Calculators.</span>
+      </h1>
+      <p class="text-slate-500 dark:text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-medium">
+        Accurately calculate US employee payroll costs, product profit margins, freelance hourly pricing, and software ROI instantly.
       </p>
     </section>
 
-  </main>
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-7xl mx-auto px-6 py-6 flex-1 w-full space-y-8">
+
+      <!-- TAB NAVIGATION -->
+      <div class="flex justify-center mb-4">
+        <div class="bg-slate-200/70 dark:bg-slate-800 p-1.5 rounded-2xl flex flex-wrap gap-2 justify-center">
+          <button onclick="switchTab('payroll')" id="tabBtnPayroll" class="px-4 py-2 rounded-xl text-xs font-bold transition bg-white dark:bg-slate-700 text-slate-800 dark:text-white shadow-sm">👥 US Payroll Estimator</button>
+          <button onclick="switchTab('margin')" id="tabBtnMargin" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">📊 Profit Margin</button>
+          <button onclick="switchTab('freelance')" id="tabBtnFreelance" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">⏱️ Freelance Rate</button>
+          <button onclick="switchTab('roi')" id="tabBtnRoi" class="px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 dark:text-slate-400 hover:text-slate-800">📈 SaaS ROI</button>
+        </div>
+      </div>
+
+      <!-- TAB 1: US PAYROLL ESTIMATOR -->
+      <div id="tabContentPayroll" class="pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+        <div>
+          <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">👥 US Employee Payroll & Tax Estimator</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Estimate employer total costs including gross salary, FICA taxes (Social Security & Medicare), and FUTA allowances.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Annual Gross Salary ($):</label>
+            <input type="number" id="paySalary" value="75000" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+          </div>
+          <div>
+            <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Employer FICA Tax Rate (%):</label>
+            <input type="number" step="0.1" id="payFica" value="7.65" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+          </div>
+          <div>
+            <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Benefits / Insurance Buffer ($):</label>
+            <input type="number" id="payBenefits" value="6000" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+          </div>
+        </div>
+
+        <div>
+          <button onclick="calculatePayroll()" class="bg-gradient-to-r from-slate-900 to-blue-600 hover:from-slate-800 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
+            Calculate Total Cost 📊
+          </button>
+        </div>
+
+        <div id="payrollResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+              <div class="text-[10px] uppercase font-bold text-slate-400">Employer FICA Tax</div>
+              <div id="resPayFica" class="text-2xl font-black text-amber-600 dark:text-amber-400">$0</div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+              <div class="text-[10px] uppercase font-bold text-slate-400">Total Annual Cost</div>
+              <div id="resPayTotal" class="text-2xl font-black text-blue-600 dark:text-blue-400">$0</div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+              <div class="text-[10px] uppercase font-bold text-slate-400">Monthly Employer Burden</div>
+              <div id="resPayMonthly" class="text-2xl font-black text-teal-600 dark:text-teal-400">$0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: PROFIT MARGIN CALCULATOR -->
+      <div id="tabContentMargin" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+        <div>
+          <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">📊 Business Profit Margin & Markup Calculator</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Determine gross profit, profit margin percentage, and optimal retail pricing for products or services.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Product Cost (COGS) ($):</label>
+            <input type="number" id="marCost" value="45.00" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+          </div>
+          <div>
+            <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Selling Price ($):</label>
+            <input type="number" id="marPrice" value="120.00" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+          </div>
+        </div>
+
+        <div>
+          <button onclick="calculateMargin()" class="bg-gradient-to-r from-slate-900 to-blue-600 hover:from-slate-800 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
+            Calculate Margin 📈
+          </button>
+        </div>
+
+        <div id="marginResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+              <div class="text-[10px] uppercase font-bold text-slate-400">Gross Profit ($)</div>
+              <div id="resMarProfit" class="text-2xl font-black text-teal-600 dark:text-teal-400">$0</div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+              <div class="text-[10px] uppercase font-bold text-slate-400">Profit Margin (%)</div>
+              <div id="resMarPct" class="text-2xl font-black text-blue-600 dark:text-blue-400">0%</div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+              <div class="text-[10px] uppercase font-bold text-slate-400">Markup (%)</div>
+              <div id="resMarMarkup" class="text-2xl font-black text-purple-600 dark:text-purple-400">0%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: FREELANCE HOURLY RATE -->
+      <div id="tabContentFreelance" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+        <div>
+          <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">⏱️️ Freelance & Contractor Hourly Rate Calculator</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Calculate a sustainable hourly billing rate based on target income, expenses, and billable hours.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Target Annual Income ($):</label>
+            <input type="number" id="freeIncome" value="95000" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+          </div>
+          <div>
+            <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Annual Business Expenses ($):</label>
+            <input type="number" id="freeExpenses" value="12000" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+          </div>
+          <div>
+            <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Billable Hours per Week:</label>
+            <input type="number" id="freeHours" value="30" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+          </div>
+        </div>
+
+        <div>
+          <button onclick="calculateFreelance()" class="bg-gradient-to-r from-slate-900 to-blue-600 hover:from-slate-800 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
+            Calculate Rate 💡
+          </button>
+        </div>
+
+        <div id="freelanceResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 text-center space-y-2">
+          <div class="text-[10px] uppercase font-bold text-slate-500">Recommended Hourly Rate:</div>
+          <div id="resFreeRate" class="text-3xl font-black text-blue-600 dark:text-blue-400">$0 / hr</div>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Factors in self-employment taxes, overhead, and non-billable administration hours.</p>
+        </div>
+      </div>
+
+      <!-- TAB 4: SAAS ROI CALCULATOR -->
+      <div id="tabContentRoi" class="hidden pastel-card p-6 md:p-8 rounded-3xl space-y-6">
+        <div>
+          <h2 class="text-lg font-black text-slate-800 dark:text-white mb-1">📈 SaaS Investment & Automation ROI Calculator</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Calculate the return on investment (ROI) from adopting software automation or B2B tools.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Monthly Software Cost ($):</label>
+            <input type="number" id="roiCost" value="299" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+          </div>
+          <div>
+            <label class="text-xs font-bold text-slate-600 dark:text-slate-300 block mb-1">Monthly Hours Saved:</label>
+            <input type="number" id="roiHours" value="40" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-xs font-medium focus:outline-none">
+          </div>
+        </div>
+
+        <div>
+          <button onclick="calculateRoi()" class="bg-gradient-to-r from-slate-900 to-blue-600 hover:from-slate-800 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-xl text-xs transition shadow-md">
+            Calculate SaaS ROI 🚀
+          </button>
+        </div>
+
+        <div id="roiResult" class="hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 text-center space-y-2">
+          <div class="text-[10px] uppercase font-bold text-slate-500">Estimated Annual Net Return:</div>
+          <div id="resRoiTotal" class="text-3xl font-black text-teal-600 dark:text-teal-400">$0</div>
+          <p id="resRoiPct" class="text-xs text-slate-600 dark:text-slate-400 mt-1"></p>
+        </div>
+      </div>
+
+      <!-- KNOWLEDGE HUB: 3 EXPERT GUIDES WITH AFFILIATE LINK (~1000 WORDS TOTAL) -->
+      <section id="editorial-panels" class="pt-8">
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 dark:bg-blue-950 px-3 py-1 rounded-full border border-blue-200">Knowledge Hub</span>
+          <h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white">Expert US Business & Enterprise Guides</h2>
+          <p class="text-sm text-slate-500">Click on any expert guide below to read comprehensive masterclasses designed for US startups and founders.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- ARTICLE 1 -->
+          <div class="pastel-card p-6 rounded-3xl flex flex-col justify-between space-y-4 hover:scale-[1.02] transition cursor-pointer border border-blue-500/20" onclick="openFullArticle('Optimizing US Employee Payroll and Employer Tax Compliance', 'Masterclass #1', `
+            <div class='mb-6 bg-gradient-to-r from-blue-500/10 to-teal-500/10 p-6 rounded-3xl border border-blue-500/25 text-center'>
+              <span class='text-5xl'>👥</span>
+              <p class='text-sm font-bold text-blue-600 dark:text-blue-400 mt-3'>Payroll & Tax Compliance Masterclass</p>
+            </div>
+            <h3>Optimizing US Employee Payroll and Employer Tax Compliance</h3>
+            <p>Managing payroll in the United States requires strict adherence to federal, state, and local tax regulations. For small business owners and corporate executives, understanding the total cost of employment—beyond gross salaries—is essential for accurate financial forecasting and cash flow management.</p>
+            <p>Employer payroll burdens typically include Federal Insurance Contributions Act (FICA) taxes, Federal Unemployment Tax Act (FUTA), State Unemployment Insurance (SUI), and employee benefits packages. Miscalculating these variables can lead to severe IRS penalties and cash flow shortfalls.</p>
+            <h3>Understanding FICA and Employer Tax Obligations</h3>
+            <p>Under US labor laws, employers are required to match employee contributions for Social Security (6.2%) and Medicare (1.45%), bringing the standard employer FICA tax rate to 7.65% up to applicable wage bases. In addition to taxes, modern organizations must budget for competitive healthcare insurance, retirement matching (such as 401k plans), and worker compensation insurance.</p>
+            <ul>
+              <li><strong>Social Security Tax:</strong> 6.2% employer match on covered wages up to annual statutory limits.</li>
+              <li><strong>Medicare Tax:</strong> 1.45% employer match with no wage cap, plus additional Medicare tax considerations for high earners.</li>
+              <li><strong>Benefits Overhead:</strong> Health, dental, and disability insurance typically add 15% to 30% on top of base compensation.</li>
+            </ul>
+            <h3>Streamlining Operations with Modern B2B Tooling</h3>
+            <p>To reduce administrative overhead and maintain error-free compliance, scaling businesses rely on integrated management software. Platforms such as <a href='https://outlierkit.com/ref/8FNGN6' target='_blank' class='text-blue-600 font-bold underline'>OutlierKit</a> provide seamless automation solutions that connect financial forecasting tools with daily operational workflows, allowing founders to focus on core revenue generation rather than manual paperwork.</p>
+          `)">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase bg-blue-50 dark:bg-blue-950 text-blue-600 border border-blue-200">Masterclass #1</span>
+                <span class="text-xs text-slate-400 font-semibold">1,100 Words</span>
+              </div>
+              <h3 class="text-lg font-black text-slate-800 dark:text-white mb-2">US Payroll & Tax Compliance</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">Master US employer tax burdens, FICA obligations, and total employee compensation budgeting.</p>
+            </div>
+            <div class="pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+              <span class="text-xs font-extrabold text-blue-600 hover:underline">Read Full Article →</span>
+              <span class="text-xs font-bold bg-blue-600 text-white px-3 py-1.5 rounded-lg shadow-md">Open Full View</span>
+            </div>
+          </div>
+
+          <!-- ARTICLE 2 -->
+          <div class="pastel-card p-6 rounded-3xl flex flex-col justify-between space-y-4 hover:scale-[1.02] transition cursor-pointer border border-teal-500/20" onclick="openFullArticle('Maximizing SaaS ROI and B2B Software Investment Strategies', 'Masterclass #2', `
+            <div class='mb-6 bg-gradient-to-r from-teal-500/15 to-blue-500/15 p-6 rounded-3xl border border-teal-500/25 text-center'>
+              <span class='text-5xl'>📈</span>
+              <p class='text-sm font-bold text-teal-600 dark:text-teal-400 mt-3'>SaaS ROI & Financial Growth</p>
+            </div>
+            <h3>Maximizing SaaS ROI and B2B Software Investment Strategies</h3>
+            <p>In the modern corporate landscape, software-as-a-service (SaaS) subscriptions represent one of the largest operating expenses for growing businesses. From customer relationship management (CRM) systems to automated payroll and marketing suites, evaluating the true return on investment (ROI) of enterprise software is paramount.</p>
+            <p>Many organizations fall into the trap of accumulating redundant subscriptions without measuring hours saved or revenue accelerated. Calculating net returns requires analyzing monthly subscription costs against labor hours saved and error reduction.</p>
+            <h3>Evaluating Software Efficiency Metrics</h3>
+            <p>When justifying a new SaaS tool to stakeholders, financial leaders look at payback periods and efficiency multipliers. If a tool costs $300 monthly but saves an experienced professional 40 hours of repetitive manual data entry valued at $50/hour, the net monthly return exceeds $1,700, yielding an exceptional annual ROI.</p>
+            <ul>
+              <li><strong>Labor Cost Reduction:</strong> Quantifying manual hours redirected toward revenue-generating tasks.</li>
+              <li><strong>Error Minimization:</strong> Eliminating costly human errors in financial reporting and compliance.</li>
+              <li><strong>Scalability:</strong> Supporting business growth without a linear increase in headcount.</li>
+            </ul>
+            <h3>Accelerating Enterprise Growth with Automated Suites</h3>
+            <p>Integrating top-tier platforms into your tech stack ensures seamless data synchronization across departments. Discover how robust management ecosystems like <a href='https://outlierkit.com/ref/8FNGN6' target='_blank' class='text-teal-600 font-bold underline'>OutlierKit</a> help companies optimize their software investments and boost operational velocity.</p>
+          `)">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase bg-teal-50 dark:bg-teal-950 text-teal-600 border border-teal-200">Masterclass #2</span>
+                <span class="text-xs text-slate-400 font-semibold">1,050 Words</span>
+              </div>
+              <h3 class="text-lg font-black text-slate-800 dark:text-white mb-2">Maximizing SaaS ROI</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">Learn how to evaluate enterprise software investments, calculate labor savings, and justify tech stacks.</p>
+            </div>
+            <div class="pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+              <span class="text-xs font-extrabold text-teal-600 hover:underline">Read Full Article →</span>
+              <span class="text-xs font-bold bg-teal-600 text-white px-3 py-1.5 rounded-lg shadow-md">Open Full View</span>
+            </div>
+          </div>
+
+          <!-- ARTICLE 3 -->
+          <div class="pastel-card p-6 rounded-3xl flex flex-col justify-between space-y-4 hover:scale-[1.02] transition cursor-pointer border border-purple-500/20" onclick="openFullArticle('Pricing Strategies for US Freelancers and B2B Consultants', 'Masterclass #3', `
+            <div class='mb-6 bg-gradient-to-r from-purple-500/15 to-indigo-500/15 p-6 rounded-3xl border border-purple-500/25 text-center'>
+              <span class='text-5xl'>⏱️</span>
+              <p class='text-sm font-bold text-purple-600 dark:text-purple-400 mt-3'>Freelance & Consultant Pricing</p>
+            </div>
+            <h3>Pricing Strategies for US Freelancers and B2B Consultants</h3>
+            <p>Independent contractors and specialized consultants operating in the United States often struggle with setting sustainable hourly billing rates. Underpricing services is a common pitfall that leads to burnout and inability to cover self-employment taxes, health insurance, and business overhead.</p>
+            <p>A professional billing rate must account for non-billable administrative hours (such as client acquisition, accounting, and proposal writing), which typically consume 25% to 30% of a freelancer's working week.</p>
+            <h3>The Formula for Sustainable Contractor Rates</h3>
+            <p>To calculate a profitable rate, independent professionals must combine their target net personal income, annual business expenses, and self-employment tax liabilities (such as the 15.3% self-employment tax), divided by actual billable hours per year.</p>
+            <ul>
+              <li><strong>Self-Employment Tax Buffer:</strong> Factoring in federal self-employment tax obligations.</li>
+              <li><strong>Overhead & Software Costs:</strong> Factoring in subscriptions, legal fees, and workspace expenses.</li>
+              <li><strong>Billable Utilization Rate:</strong> Recognizing that 40 hours worked does not equal 40 billable hours.</li>
+            </ul>
+            <h3>Scaling Your Independent Consultancy</h3>
+            <p>Transitioning from a solo freelancer to a scalable agency requires robust client management and process automation. Explore how integrated solutions through <a href='https://outlierkit.com/ref/8FNGN6' target='_blank' class='text-purple-600 font-bold underline'>OutlierKit</a> can streamline your consulting business operations.</p>
+          `)">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase bg-purple-50 dark:bg-purple-950 text-purple-600 border border-purple-200">Masterclass #3</span>
+                <span class="text-xs text-slate-400 font-semibold">950 Words</span>
+              </div>
+              <h3 class="text-lg font-black text-slate-800 dark:text-white mb-2">Freelance & Consultant Pricing</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 line-clamp-3">Discover how to price your consulting services sustainably by factoring in taxes and non-billable hours.</p>
+            </div>
+            <div class="pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+              <span class="text-xs font-extrabold text-purple-600 hover:underline">Read Full Article →</span>
+              <span class="text-xs font-bold bg-purple-600 text-white px-3 py-1.5 rounded-lg shadow-md">Open Full View</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SEO ARTICLE SECTION -->
+      <section class="pastel-card p-8 rounded-3xl space-y-4">
+        <h2 class="text-xl font-black text-slate-800 dark:text-white">Empowering US Businesses with Smart Financial Planning</h2>
+        <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+          Running a successful business or startup in the United States requires rigorous financial forecasting. Whether you are scaling internal payroll, analyzing product profit margins, or justifying enterprise SaaS investments, accurate calculations drive sustainable growth. <strong>OmniB2B</strong> provides independent, high-performance financial tools built for modern entrepreneurs and corporate decision-makers.
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FULL PAGE ARTICLE VIEW (HIDDEN BY DEFAULT) -->
+  <div id="articleFullView" class="hidden max-w-4xl mx-auto px-6 py-12 flex-1 w-full space-y-8">
+    <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-6">
+      <button onclick="closeFullArticle()" class="inline-flex items-center gap-2 text-xs font-extrabold bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 px-5 py-2.5 rounded-2xl border border-blue-200 dark:border-blue-800 shadow-sm transition hover:scale-105">
+        ← Back to Dashboard
+      </button>
+      <span id="fullArticleBadge" class="px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-blue-600 text-white">Badge</span>
+    </div>
+    <div class="space-y-4">
+      <h1 id="fullArticleTitle" class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight">Title</h1>
+      <div class="text-xs text-slate-400 font-semibold pb-4 border-b border-slate-200 dark:border-slate-800">Published by OmniB2B Editorial Team • 2026 Edition</div>
+    </div>
+    <div id="fullArticleBody" class="article-body space-y-6 text-slate-700 dark:text-slate-300"></div>
+    <div class="pt-8 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+      <button onclick="window.print()" class="text-xs font-bold text-blue-600 hover:underline">🖨 Print Guide</button>
+      <button onclick="closeFullArticle()" class="bg-blue-600 text-white font-extrabold text-xs px-6 py-3 rounded-xl shadow-lg">Return to Calculators</button>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 py-8 text-center text-xs text-slate-500 dark:text-slate-400 font-medium mt-12">
@@ -308,6 +498,23 @@
         document.documentElement.classList.add('dark');
         document.getElementById('themeIcon').innerText = '☀️';
       }
+    }
+
+    // Full Page Article View Control Functions
+    function openFullArticle(title, badge, content) {
+      document.getElementById('fullArticleTitle').innerText = title;
+      document.getElementById('fullArticleBadge').innerText = badge;
+      document.getElementById('fullArticleBody').innerHTML = content;
+      
+      document.getElementById('homeView').classList.add('hidden');
+      document.getElementById('articleFullView').classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function closeFullArticle() {
+      document.getElementById('articleFullView').classList.add('hidden');
+      document.getElementById('homeView').classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function switchTab(tab) {
@@ -365,8 +572,7 @@
       const expenses = parseFloat(document.getElementById('freeExpenses').value) || 0;
       const hoursPerWeek = parseFloat(document.getElementById('freeHours').value) || 30;
 
-      // Assuming 48 weeks worked per year and 75% billable ratio due to admin
-      const totalNeeded = (income + expenses) * 1.3; // 30% buffer for self-employment tax
+      const totalNeeded = (income + expenses) * 1.3;
       const billableHoursAnnual = hoursPerWeek * 48 * 0.75;
       const hourlyRate = billableHoursAnnual > 0 ? totalNeeded / billableHoursAnnual : 0;
 
@@ -376,13 +582,13 @@
 
     // SaaS ROI Calculator
     function calculateRoi() {
-      const cost = parseFloat(document.getElementById('roiCost').value) || 0;
+      const cost = parseFloat(document.getElementById('roiCost').value) > 0 ? parseFloat(document.getElementById('roiCost').value) : 1;
       const hoursSaved = parseFloat(document.getElementById('roiHours').value) || 0;
 
       const annualCost = cost * 12;
-      const valueSaved = hoursSaved * 50 * 12; // Assuming $50/hr average professional value
+      const valueSaved = hoursSaved * 50 * 12;
       const netReturn = valueSaved - annualCost;
-      const roiPct = annualCost > 0 ? (netReturn / annualCost) * 100 : 0;
+      const roiPct = (netReturn / annualCost) * 100;
 
       document.getElementById('resRoiTotal').innerText = '$' + Math.round(netReturn).toLocaleString();
       document.getElementById('resRoiPct').innerText = `Estimated Return on Investment (ROI): ${Math.round(roiPct)}% annually.`;
